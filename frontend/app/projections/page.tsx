@@ -25,6 +25,7 @@ function AgeMilestone({ age, value, label }: { age: number; value: number; label
   );
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export default function ProjectionsPage() {
   const [projections, setProjections] = useState<any>(null);
   const [loading, setLoading] = useState(true);

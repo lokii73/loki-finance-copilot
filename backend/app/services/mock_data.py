@@ -5,9 +5,9 @@ Date: June 9, 2026
 Age: 21 | Goal: Financial Freedom | Horizon: 10-20 years
 
 REAL SUMMARY:
-- Total Invested:  ₹2,125.06
-- Current Value:   ₹2,107.24
-- Unrealised P&L:  -₹17.81 (-0.84%)
+- Total Invested:  ₹4,853.00
+- Current Value:   ₹4,966.00
+- Unrealised P&L:  ₹112.84 (+2.33%)
 - Overall XIRR:    -19.87% (all investments < 2 months old — normal)
 
 KEY INSIGHT: Negative XIRR is EXPECTED at 2 months. All four funds are
@@ -59,10 +59,10 @@ REAL_MUTUAL_FUNDS = [
         "units":          9.481,
         "avg_nav":        105.461,
         "current_nav":    103.317,
-        "invested_amount":999.88,
-        "current_value":  979.55,
-        "pnl":            -20.33,
-        "pnl_percent":    -2.03,
+        "invested_amount":1611.00,
+        "current_value":1654.36,
+        "pnl":43.36,
+        "pnl_percent":2.69,
         "xirr":           -2.03,
         # Fund info
         "risk_level":     "High",
@@ -118,10 +118,10 @@ REAL_MUTUAL_FUNDS = [
         "units":          3.691,
         "avg_nav":        216.713,
         "current_nav":    218.0,
-        "invested_amount":799.89,
-        "current_value":  804.64,
-        "pnl":            4.75,
-        "pnl_percent":    0.59,
+        "invested_amount":1288.78,
+        "current_value":1358.95,
+        "pnl":70.17,
+        "pnl_percent":5.44,
         "xirr":           0.59,
         # Fund info
         "risk_level":     "High",
@@ -178,10 +178,10 @@ REAL_MUTUAL_FUNDS = [
         "units":          1.538,
         "avg_nav":        195.045,
         "current_nav":    192.539,
-        "invested_amount":299.98,
-        "current_value":  296.13,
-        "pnl":            -3.85,
-        "pnl_percent":    -1.28,
+        "invested_amount":483.33,
+        "current_value":500.13,
+        "pnl":16.80,
+        "pnl_percent":3.48,
         "xirr":           -1.28,
         # Fund info
         "risk_level":     "Very High",
@@ -239,10 +239,10 @@ REAL_MUTUAL_FUNDS = [
         "units":          0.685,
         "avg_nav":        36.95,
         "current_nav":    39.31,
-        "invested_amount":25.31,
-        "current_value":  26.93,
-        "pnl":            1.62,
-        "pnl_percent":    6.39,
+        "invested_amount":40.78,
+        "current_value":45.48,
+        "pnl":4.70,
+        "pnl_percent":11.53,
         "xirr":           -29.12,   # absolute return shown (< 1yr per Angel One)
         # Fund info
         "risk_level":     "Very High",
@@ -288,7 +288,58 @@ REAL_MUTUAL_FUNDS = [
 ]
 
 # No ETF holdings in real portfolio
-REAL_HOLDINGS = []
+REAL_HOLDINGS = [
+    {
+        "symbol": "HDFCMID150",
+        "company_name": "HDFC Nifty Midcap 150 ETF",
+        "instrument_type": "ETF",
+        "quantity": 18,
+        "avg_buy_price": 23.47,
+        "current_price": 23.25,
+        "day_change": 0.21,
+        "day_change_percent": 0.91
+    },
+    {
+        "symbol": "ITC",
+        "company_name": "ITC Limited",
+        "instrument_type": "Stock",
+        "quantity": 1,
+        "avg_buy_price": 297.56,
+        "current_price": 291.15,
+        "day_change": 0.40,
+        "day_change_percent": 0.14
+    },
+    {
+        "symbol": "NIFTYBEES",
+        "company_name": "Nippon India Nifty 50 ETF",
+        "instrument_type": "ETF",
+        "quantity": 2,
+        "avg_buy_price": 274.96,
+        "current_price": 273.97,
+        "day_change": 0.86,
+        "day_change_percent": 0.31
+    },
+    {
+        "symbol": "PHARMABEES",
+        "company_name": "Nippon India Pharma ETF",
+        "instrument_type": "ETF",
+        "quantity": 2,
+        "avg_buy_price": 25.57,
+        "current_price": 24.90,
+        "day_change": 0.15,
+        "day_change_percent": 0.61
+    },
+    {
+        "symbol": "TATAGOLD",
+        "company_name": "Tata Gold ETF",
+        "instrument_type": "ETF",
+        "quantity": 7,
+        "avg_buy_price": 15.47,
+        "current_price": 14.34,
+        "day_change": -0.18,
+        "day_change_percent": -1.24
+    }
+]
 
 # ─────────────────────────────────────────────────────────────────
 # REAL SIP PLANS
@@ -336,7 +387,7 @@ REAL_SIP_PLANS = [
 # PORTFOLIO CONTEXT FOR AI
 # ─────────────────────────────────────────────────────────────────
 PORTFOLIO_CONTEXT_FOR_AI = {
-    "total_invested":  2125.06,
+    "total_invested":  4853.00,
     "current_value":   2107.24,
     "pnl":             -17.81,
     "pnl_percent":     -0.84,
@@ -356,15 +407,15 @@ PORTFOLIO_CONTEXT_FOR_AI = {
 # ─────────────────────────────────────────────────────────────────
 def get_real_portfolio_overview() -> Dict[str, Any]:
     return {
-        "total_invested":        2125.06,
-        "total_value":           2107.24,
-        "total_pnl":             -17.81,
-        "total_pnl_percent":     -0.84,
+        "total_invested":        4853.00,
+        "total_value":           4966.00,
+        "total_pnl":             112.84,
+        "total_pnl_percent":     2.33,
         "xirr":                  -19.87,
-        "today_change":          -3.20,
-        "today_change_percent":  -0.15,
-        "mf_value":              2107.24,
-        "stocks_value":          0.0,
+        "today_change":          24.01,
+        "today_change_percent":  0.48,
+        "mf_value":              3559.00,
+        "stocks_value":          1407.00,
         "sip_monthly_amount":    1625.0,
         "active_sips":           4,
         "last_updated":          "2026-06-09",
@@ -381,8 +432,8 @@ def get_real_portfolio_analysis() -> Dict[str, Any]:
         "diversification_score": 32,
         "wealth_score":          62,
         "asset_allocation": {
-            "mutual_funds_percent": 100,
-            "stocks_percent":        0,
+            "mutual_funds_percent": 72,
+            "stocks_percent":        28,
             "etf_percent":           0,
             "debt_percent":          0,
         },

@@ -2,12 +2,12 @@
 import { useEffect, useState } from 'react';
 import AppLayout from '@/components/AppLayout';
 import { recommendationsAPI } from '@/lib/api';
-import { AlertTriangle, CheckCircle, Info, ArrowUpRight, ShieldCheck, Sparkles, Filter, CheckCircle2, TrendingUp } from 'lucide-react';
+import { CheckCircle2, Info, ShieldCheck, Sparkles } from 'lucide-react';
 import { formatCurrency } from '@/lib/utils';
 
 export default function RecommendationsPage() {
-  const [recs, setRecs] = useState<any[]>([]);
-  const [actionPlan, setActionPlan] = useState<any>(null);
+  const [recs, setRecs] = useState<{ priority: string; [key: string]: any }[]>([]);
+  const [actionPlan, setActionPlan] = useState<{ [key: string]: any } | null>(null);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('All');
 
