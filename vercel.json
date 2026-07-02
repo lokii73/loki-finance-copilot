@@ -1,0 +1,38 @@
+{
+    "services": {
+        "frontend": {
+            "root": "frontend",
+            "framework": "nextjs"
+        },
+        "backend": {
+            "root": "backend"
+        },
+        "lokesh-fitness-plan": {
+            "root": "lokesh-fitness-plan",
+            "framework": "vite"
+        }
+    },
+    "rewrites": [
+        {
+            "source": "/api/backend(/.*)?",
+            "destination": {
+                "type": "service",
+                "service": "backend"
+            }
+        },
+        {
+            "source": "/fitness(/.*)?",
+            "destination": {
+                "type": "service",
+                "service": "lokesh-fitness-plan"
+            }
+        },
+        {
+            "source": "/(.*)",
+            "destination": {
+                "type": "service",
+                "service": "frontend"
+            }
+        }
+    ]
+}
