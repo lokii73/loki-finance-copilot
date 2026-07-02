@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth, portfolio, stocks, mutual_funds, market, chat, projections, recommendations, exit_alerts, planners, news
+from app.routers import auth, portfolio, stocks, mutual_funds, market, chat, projections, recommendations, exit_alerts, planners, news, stock_suggestions
 
 app = FastAPI(
     title="StockGPT India API",
@@ -31,6 +31,7 @@ app.include_router(recommendations.router, prefix="/recommendations", tags=["Rec
 app.include_router(exit_alerts.router, prefix="/exit-alerts", tags=["Exit Alerts"])
 app.include_router(planners.router, prefix="/planners", tags=["Goal Planners"])
 app.include_router(news.router, prefix="/news", tags=["News"])
+app.include_router(stock_suggestions.router, prefix="/stock-suggestions", tags=["Stock Suggestions"])
 
 
 @app.get("/")

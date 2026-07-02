@@ -14,6 +14,7 @@ const mainMenuItems = [
   { href: '/exit-alerts',         label: 'Exit Alerts',        icon: ShieldAlert },
   { href: '/mutual-funds',        label: 'Mutual Funds',       icon: BookOpen },
   { href: '/recommendations',     label: 'Top Picks',          icon: Star },
+  { href: '/stock-suggestions',   label: 'Stock Ideas',        icon: Sparkles },
 ];
 
 const preferencesItems = [

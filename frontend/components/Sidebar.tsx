@@ -17,6 +17,7 @@ const navItems = [
   { href: '/chat', label: 'AI Copilot Chat', icon: MessageSquare },
   { href: '/projections', label: 'Wealth Pathing', icon: Calculator },
   { href: '/recommendations', label: 'Optimal Plan', icon: Lightbulb },
+  { href: '/stock-suggestions', label: 'Stock Ideas', icon: Compass },
 ];
 
 interface SidebarProps {

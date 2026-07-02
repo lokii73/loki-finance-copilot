@@ -119,3 +119,7 @@ export const newsAPI = {
   getImpact:    () => api.get('/news/market-impact'),
   getSummary:   () => api.get('/news/summary'),
 };
+
+export const stockSuggestionsAPI = {
+  getAll: () => api.get('/stock-suggestions/'),
+};
